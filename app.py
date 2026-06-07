@@ -315,7 +315,7 @@ OPENAPI_SPEC: Dict[str, Any] = {
         "version": "1.0.0",
         "description": "Flask REST API for creating and AI-generating social media posts.",
     },
-    "servers": [{"url": "http://localhost:5000"}],
+    "servers": [{"url": "/"}],
     "paths": {
         "/api/contents": {
             "get": {

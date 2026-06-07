@@ -17,13 +17,28 @@ Flask REST API that stores social media posts in PostgreSQL and can generate str
 - PostgreSQL database.
 - OpenAI API key for the AI generation endpoint.
 
+## Run Locally
+
+Create and activate a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-## Environment Variables
+Make sure PostgreSQL is running and create a database for the project. For example:
+
+```bash
+createdb social_posts
+```
+
+Set the required environment variables:
 
 ```bash
 export DATABASE_URL="postgresql+psycopg2://user:password@localhost:5432/social_posts"
@@ -33,7 +48,7 @@ export OPENAI_MODEL="gpt-4o-mini"
 
 `OPENAI_MODEL` is optional. The application defaults to `gpt-4o-mini`.
 
-## Run the API
+Start the Flask API:
 
 ```bash
 python app.py
